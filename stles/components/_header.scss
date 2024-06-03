@@ -8,7 +8,7 @@ body{
         display: flex;
         justify-content: center;
         background-color: green;
-        background-color: green;
+      
    
         .header-content{
            max-width:  1110px ; 
@@ -20,6 +20,14 @@ body{
         }
     }
 
+
+.underline{
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #979797;
+    height: 5px;
+}
 
   }
 }
