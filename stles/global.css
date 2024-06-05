@@ -117,7 +117,7 @@ section {
 
 body {
   line-height: 1;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   background-color: #f7f7f7;
 }
 
@@ -135,7 +135,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -149,11 +149,11 @@ button {
 }
 
 @font-face {
-  font-family: 'Noto Sans Georgian';
-  src: url('../../assets/fonts/NotoSansGeorgian-VariableFont_wdth,wght.ttf');
+  font-family: "Noto Sans Georgian";
+  src: url("../../assets/fonts/NotoSansGeorgian-VariableFont_wdth,wght.ttf");
 }
 body {
-  font-family: 'Noto Sans Georgian', sans-serif;
+  font-family: "Noto Sans Georgian", sans-serif;
 }
 
 body header {
@@ -173,10 +173,134 @@ body header .header_container .header-content {
   justify-content: space-between;
   align-items: center;
 }
+body header .header_container .header-content .navigation nav ul {
+  display: flex;
+  gap: 50px;
+}
+body header .header_container .header-content .navigation nav ul a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 2px;
+  text-align: left;
+}
 body header .underline {
   max-width: 1110px;
   width: 100%;
   margin: 0 auto;
-  background-color: #979797;
+  background-color: #ffffff;
   height: 5px;
-} /*# sourceMappingURL=global.css.map */
+  opacity: 20%;
+}
+
+body main .sec1_container {
+  background-color: black;
+}
+body main .sec1_container .sec1_content {
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+body main .sec1_container .sec1_content .desc_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  color: #ffffff;
+}
+body main .sec1_container .sec1_content .desc_div .new_product {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.12px;
+  letter-spacing: 10px;
+  text-align: left;
+  opacity: 49%;
+}
+body main .sec1_container .sec1_content .desc_div .product_name {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 58px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+body main .sec1_container .sec1_content .desc_div .product_describtion {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+  text-align: left;
+}
+body main .sec1_container .sec1_content .desc_div .btn_wrapper .btn_see_product {
+  background-color: #d87d4a;
+  color: #ffffff;
+  padding: 15px 30px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 17.76px;
+  letter-spacing: 1px;
+  text-align: left;
+  margin-top: 16px;
+  border: none;
+}
+body main .sec1_container .sec1_content .img_div img {
+  max-width: 580px;
+  height: 540px;
+}
+body main section .sec2_content {
+  max-width: 1110px;
+  width: 100%;
+  margin: 200px auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+body main section .sec2_content .products {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main section .sec2_content .products .product_image {
+  max-width: 122px;
+  height: 160px;
+}
+body main section .sec2_content .products .product_name {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24.59px;
+  letter-spacing: 1.2857142687px;
+  text-align: center;
+  margin-top: 36px;
+  margin: 36px 108px 0 108px;
+}
+body main section .sec2_content .products .shop_container {
+  display: flex;
+  margin-top: 15px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+body main section .sec2_content .products .shop_container .shop {
+  font-family: Manrope;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 17.76px;
+  letter-spacing: 1px;
+  text-align: left;
+  margin-right: 13.2px;
+}
+body main section .sec2_content .products .shop_container .arrow {
+  width: 5px;
+  height: 10px;
+}
+body main section .sec2_content .products .div_bg {
+  position: absolute;
+  width: 350px;
+  height: 30px;
+  background-color: #f1f1f1;
+  bottom: 0;
+  height: 204px;
+  z-index: -1;
+}/*# sourceMappingURL=global.css.map */
