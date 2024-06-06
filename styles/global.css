@@ -115,6 +115,10 @@ section {
   display: block;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
   line-height: 1;
   font-family: "Work Sans", sans-serif;
@@ -156,18 +160,24 @@ body {
   font-family: "Noto Sans Georgian", sans-serif;
 }
 
+body main .sec3_container .sec3_content {
+  max-width: 111rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
 body header {
   background-color: black;
 }
 body header .header_container {
-  max-width: 1440px;
-  height: 100px;
+  max-width: 144rem;
+  height: 10rem;
   margin: 0 auto;
   display: flex;
   justify-content: center;
 }
 body header .header_container .header-content {
-  max-width: 1110px;
+  max-width: 111rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -175,23 +185,23 @@ body header .header_container .header-content {
 }
 body header .header_container .header-content .navigation nav ul {
   display: flex;
-  gap: 50px;
+  gap: 5rem;
 }
 body header .header_container .header-content .navigation nav ul a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 13px;
+  font-size: 1.3rem;
   font-weight: 700;
-  line-height: 25px;
-  letter-spacing: 2px;
+  line-height: 2.5rem;
+  letter-spacing: 0.2rem;
   text-align: left;
 }
 body header .underline {
-  max-width: 1110px;
+  max-width: 111rem;
   width: 100%;
   margin: 0 auto;
   background-color: #ffffff;
-  height: 5px;
+  height: 0.5rem;
   opacity: 20%;
 }
 
@@ -199,7 +209,7 @@ body main .sec1_container {
   background-color: black;
 }
 body main .sec1_container .sec1_content {
-  max-width: 1110px;
+  max-width: 111rem;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -209,98 +219,131 @@ body main .sec1_container .sec1_content .desc_div {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 24px;
+  gap: 2.4rem4;
   color: #ffffff;
 }
 body main .sec1_container .sec1_content .desc_div .new_product {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 400;
-  line-height: 19.12px;
-  letter-spacing: 10px;
+  line-height: 1.912rem;
+  letter-spacing: 1rem;
   text-align: left;
   opacity: 49%;
 }
 body main .sec1_container .sec1_content .desc_div .product_name {
-  font-size: 56px;
+  font-size: 5.6rem;
   font-weight: 700;
-  line-height: 58px;
-  letter-spacing: 2px;
+  line-height: 5.8rem;
+  letter-spacing: 0.2rem;
   text-align: left;
 }
 body main .sec1_container .sec1_content .desc_div .product_describtion {
-  font-size: 15px;
+  font-size: 1.5rem;
   font-weight: 500;
-  line-height: 25px;
+  line-height: 2.5rem;
   text-align: left;
 }
 body main .sec1_container .sec1_content .desc_div .btn_wrapper .btn_see_product {
   background-color: #d87d4a;
   color: #ffffff;
-  padding: 15px 30px;
-  font-size: 13px;
+  padding: 1.5rem 3rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  line-height: 17.76px;
-  letter-spacing: 1px;
+  line-height: 1.776rem;
+  letter-spacing: 0.1rem;
   text-align: left;
-  margin-top: 16px;
+  margin-top: 1.6rem;
   border: none;
 }
 body main .sec1_container .sec1_content .img_div img {
-  max-width: 580px;
-  height: 540px;
+  max-width: 58rem;
+  height: 54rem;
 }
-body main section .sec2_content {
-  max-width: 1110px;
+body main .sec2_container .sec2_content {
+  max-width: 111rem;
   width: 100%;
-  margin: 200px auto;
+  margin: 0 auto;
+  margin-top: 12rem;
   position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+body main .sec2_container .sec2_content .products {
   display: flex;
   justify-content: space-between;
-}
-body main section .sec2_content .products {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
-body main section .sec2_content .products .product_image {
-  max-width: 122px;
-  height: 160px;
+body main .sec2_container .sec2_content .products .image_wrapper {
+  position: relative;
 }
-body main section .sec2_content .products .product_name {
-  font-size: 18px;
+body main .sec2_container .sec2_content .products .image_wrapper .product_image {
+  max-width: 12.2rem;
+  height: 16rem;
+}
+body main .sec2_container .sec2_content .products .image_wrapper .speakerImg {
+  margin-top: 1.35rem;
+  max-width: 16.8rem !important;
+  height: 14.1rem;
+}
+body main .sec2_container .sec2_content .products .product_name {
+  font-size: 1.8rem;
   font-weight: 700;
-  line-height: 24.59px;
-  letter-spacing: 1.2857142687px;
-  text-align: center;
-  margin-top: 36px;
-  margin: 36px 108px 0 108px;
+  line-height: 2.459rem;
+  letter-spacing: 0.1285714269rem;
+  margin-top: 3.3rem;
 }
-body main section .sec2_content .products .shop_container {
+body main .sec2_container .sec2_content .products .shop_container {
   display: flex;
-  margin-top: 15px;
+  margin-top: 1.5rem;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 3rem;
 }
-body main section .sec2_content .products .shop_container .shop {
+body main .sec2_container .sec2_content .products .shop_container .shop {
   font-family: Manrope;
-  font-size: 13px;
+  font-size: 1.3rem;
   font-weight: 700;
-  line-height: 17.76px;
-  letter-spacing: 1px;
+  line-height: 1.776rem;
+  letter-spacing: 0.1rem;
   text-align: left;
-  margin-right: 13.2px;
+  margin-right: 1.32rem;
 }
-body main section .sec2_content .products .shop_container .arrow {
-  width: 5px;
-  height: 10px;
+body main .sec2_container .sec2_content .products .shop_container .arrow {
+  width: 0.5rem;
+  height: 1rem;
 }
-body main section .sec2_content .products .div_bg {
+body main .sec2_container .sec2_content .products .div_bg {
   position: absolute;
-  width: 350px;
-  height: 30px;
+  width: 35rem;
+  height: 3rem;
   background-color: #f1f1f1;
   bottom: 0;
-  height: 204px;
+  height: 20.4rem;
   z-index: -1;
+}
+body main .sec3_container {
+  margin-top: 11.2rem;
+}
+body main .sec3_container .sec3_content {
+  display: flex;
+  align-items: center;
+  gap: 12.5rem;
+}
+body main .sec3_container .sec3_content .sec3_describtion_text h3 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4.4rem;
+  letter-spacing: 0.1428571463rem;
+  text-align: left;
+}
+body main .sec3_container .sec3_content .sec3_describtion_text h3 span {
+  color: #d87d4a;
+}
+body main .sec3_container .sec3_content .sec3_describtion_text p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  text-align: left;
+  margin-top: 3.2rem;
 }/*# sourceMappingURL=global.css.map */

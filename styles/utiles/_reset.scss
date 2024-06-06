@@ -11,8 +11,6 @@
   box-sizing: border-box;
 }
 
-
-
 html,
 body,
 div,
@@ -117,10 +115,13 @@ nav,
 section {
   display: block;
 }
+html {
+  font-size: 10px;
+}
 
 body {
   line-height: 1;
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Work Sans', sans-serif;
   background-color: #f7f7f7;
 }
 
@@ -138,7 +139,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 
