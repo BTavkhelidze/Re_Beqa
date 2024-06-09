@@ -61,15 +61,18 @@ body {
       }
     }
     .sec2_container {
+      
       .sec2_content {
         max-width: 111rem;
         width: 100%;
         margin: 0 auto;
-        margin-top: 12rem;
-        position: relative;
+
         display: grid;
+        padding-top: 12rem;
+        position: relative;
         grid-template-columns: repeat(3, 1fr);
         gap: 3rem;
+
         .products {
           display: flex;
           justify-content: space-between;
