@@ -161,7 +161,7 @@ body {
   font-family: "Noto Sans Georgian", sans-serif;
 }
 
-body main .sec3_container .sec3_content {
+body main .advertise_container .ad_content {
   max-width: 111rem;
   width: 100%;
   margin: 0 auto;
@@ -197,6 +197,16 @@ body header .header_container .header-content .navigation nav ul a {
   letter-spacing: 0.2rem;
   text-align: left;
 }
+body header .header_container .header-content .navigation nav ul a .cart_icon {
+  width: 24px;
+  height: 20px;
+}
+body header .header_container .header-content .navigation nav ul a .cart_icon path {
+  transition: 250ms;
+}
+body header .header_container .header-content .navigation nav ul a:hover .cart_icon path {
+  transition: 250ms;
+}
 body header .underline {
   max-width: 111rem;
   width: 100%;
@@ -206,24 +216,25 @@ body header .underline {
   opacity: 20%;
 }
 
-body main .sec1_container {
+body main .new_product_container {
   background-color: black;
 }
-body main .sec1_container .sec1_content {
+body main .new_product_container .new_product_content {
   max-width: 111rem;
   width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
-body main .sec1_container .sec1_content .desc_div {
+body main .new_product_container .new_product_content .np_desc_div {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2.4rem4;
+  gap: 2.4rem;
   color: #ffffff;
+  flex: 0.6;
 }
-body main .sec1_container .sec1_content .desc_div .new_product {
+body main .new_product_container .new_product_content .np_desc_div .new_product {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.912rem;
@@ -231,20 +242,20 @@ body main .sec1_container .sec1_content .desc_div .new_product {
   text-align: left;
   opacity: 49%;
 }
-body main .sec1_container .sec1_content .desc_div .product_name {
+body main .new_product_container .new_product_content .np_desc_div .product_name {
   font-size: 5.6rem;
   font-weight: 700;
   line-height: 5.8rem;
   letter-spacing: 0.2rem;
   text-align: left;
 }
-body main .sec1_container .sec1_content .desc_div .product_describtion {
+body main .new_product_container .new_product_content .np_desc_div .product_describtion {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 2.5rem;
   text-align: left;
 }
-body main .sec1_container .sec1_content .desc_div .btn_wrapper .btn_see_product {
+body main .new_product_container .new_product_content .np_desc_div .btn_wrapper .btn_see_product {
   background-color: #d87d4a;
   color: #ffffff;
   padding: 1.5rem 3rem;
@@ -256,11 +267,14 @@ body main .sec1_container .sec1_content .desc_div .btn_wrapper .btn_see_product 
   margin-top: 1.6rem;
   border: none;
 }
-body main .sec1_container .sec1_content .img_div img {
+body main .new_product_container .new_product_content .np_img_div {
+  flex: 0.4;
+}
+body main .new_product_container .new_product_content .np_img_div img {
   max-width: 58rem;
   height: 54rem;
 }
-body main .sec2_container .sec2_content {
+body main .selling_products_container .selling_products_content {
   max-width: 111rem;
   width: 100%;
   margin: 0 auto;
@@ -270,38 +284,38 @@ body main .sec2_container .sec2_content {
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
 }
-body main .sec2_container .sec2_content .products {
+body main .selling_products_container .selling_products_content .product_div {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
 }
-body main .sec2_container .sec2_content .products .image_wrapper {
+body main .selling_products_container .selling_products_content .product_div .image_wrapper {
   position: relative;
 }
-body main .sec2_container .sec2_content .products .image_wrapper .product_image {
+body main .selling_products_container .selling_products_content .product_div .image_wrapper .product_image {
   max-width: 12.2rem;
   height: 16rem;
 }
-body main .sec2_container .sec2_content .products .image_wrapper .speakerImg {
+body main .selling_products_container .selling_products_content .product_div .image_wrapper .speakerImg {
   margin-top: 1.35rem;
   max-width: 16.8rem !important;
   height: 14.1rem;
 }
-body main .sec2_container .sec2_content .products .product_name {
+body main .selling_products_container .selling_products_content .product_div .product_name {
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 2.459rem;
   letter-spacing: 0.1285714269rem;
   margin-top: 3.3rem;
 }
-body main .sec2_container .sec2_content .products .shop_container {
+body main .selling_products_container .selling_products_content .product_div .shop_container {
   display: flex;
   margin-top: 1.5rem;
   align-items: center;
   margin-bottom: 3rem;
 }
-body main .sec2_container .sec2_content .products .shop_container .shop {
+body main .selling_products_container .selling_products_content .product_div .shop_container .shop {
   font-family: Manrope;
   font-size: 1.3rem;
   font-weight: 700;
@@ -310,11 +324,11 @@ body main .sec2_container .sec2_content .products .shop_container .shop {
   text-align: left;
   margin-right: 1.32rem;
 }
-body main .sec2_container .sec2_content .products .shop_container .arrow {
+body main .selling_products_container .selling_products_content .product_div .shop_container .arrow {
   width: 0.5rem;
   height: 1rem;
 }
-body main .sec2_container .sec2_content .products .div_bg {
+body main .selling_products_container .selling_products_content .product_div .div_bg {
   position: absolute;
   width: 35rem;
   height: 3rem;
@@ -323,28 +337,34 @@ body main .sec2_container .sec2_content .products .div_bg {
   height: 20.4rem;
   z-index: -1;
 }
-body main .sec3_container {
+body main .advertise_container {
   margin-top: 11.2rem;
 }
-body main .sec3_container .sec3_content {
+body main .advertise_container .ad_content {
   display: flex;
   align-items: center;
   gap: 12.5rem;
 }
-body main .sec3_container .sec3_content .sec3_describtion_text h3 {
+body main .advertise_container .ad_content .ad_describtion_text {
+  flex: 0.5;
+}
+body main .advertise_container .ad_content .ad_describtion_text h3 {
   font-size: 4rem;
   font-weight: 700;
   line-height: 4.4rem;
   letter-spacing: 0.1428571463rem;
   text-align: left;
 }
-body main .sec3_container .sec3_content .sec3_describtion_text h3 span {
+body main .advertise_container .ad_content .ad_describtion_text h3 span {
   color: #d87d4a;
 }
-body main .sec3_container .sec3_content .sec3_describtion_text p {
+body main .advertise_container .ad_content .ad_describtion_text p {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 2.5rem;
   text-align: left;
   margin-top: 3.2rem;
+}
+body main .advertise_container .ad_content .ad_img {
+  flex: 0.5;
 }/*# sourceMappingURL=global.css.map */

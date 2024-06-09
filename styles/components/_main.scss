@@ -1,19 +1,20 @@
 body {
   main {
-    .sec1_container {
+    .new_product_container {
       background-color: black;
-      .sec1_content {
+      .new_product_content {
         max-width: 111rem;
         width: 100%;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
-        .desc_div {
+        .np_desc_div {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          gap: 2.4rem4;
+          gap: 2.4rem;
           color: $main-bg-color;
+          flex: 0.6;
 
           .new_product {
             font-size: 1.4rem;
@@ -52,7 +53,8 @@ body {
             }
           }
         }
-        .img_div {
+        .np_img_div {
+          flex: 0.4;
           img {
             max-width: 58rem;
             height: 54rem;
@@ -60,9 +62,8 @@ body {
         }
       }
     }
-    .sec2_container {
-      
-      .sec2_content {
+    .selling_products_container {
+      .selling_products_content {
         max-width: 111rem;
         width: 100%;
         margin: 0 auto;
@@ -73,7 +74,7 @@ body {
         grid-template-columns: repeat(3, 1fr);
         gap: 3rem;
 
-        .products {
+        .product_div {
           display: flex;
           justify-content: space-between;
           flex-direction: column;
@@ -89,12 +90,6 @@ body {
               max-width: 16.8rem !important;
               height: 14.1rem;
             }
-            // .shadow_box {
-            //   position: relative;
-            //   .shadow {
-            //     position: absolute;
-            //   }
-            // }
           }
           .product_name {
             font-size: 1.8rem;
@@ -136,14 +131,15 @@ body {
         }
       }
     }
-    .sec3_container {
+    .advertise_container {
       margin-top: 11.2rem;
-      .sec3_content {
+      .ad_content {
         @extend %contentDiv;
         display: flex;
         align-items: center;
         gap: 12.5rem;
-        .sec3_describtion_text {
+        .ad_describtion_text {
+          flex: 0.5;
           h3 {
             font-size: 4rem;
             font-weight: 700;
@@ -162,7 +158,8 @@ body {
             margin-top: 3.2rem;
           }
         }
-        .sec3_img {
+        .ad_img {
+          flex: 0.5;
         }
       }
     }

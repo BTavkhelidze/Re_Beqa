@@ -29,13 +29,27 @@ body {
                 line-height: 2.5rem;
                 letter-spacing: 0.2rem;
                 text-align: left;
+                .cart_icon {
+                  width: 24px;
+                  height: 20px;
+                  path {
+                    transition: 250ms;
+                  }
+                }
+                &:hover {
+                  .cart_icon {
+                    path {
+                      // fill: $button-bg-color;
+                      transition: 250ms;
+                    }
+                  }
+                }
               }
             }
           }
         }
       }
     }
-
     .underline {
       max-width: 111rem;
       width: 100%;
