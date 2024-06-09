@@ -161,12 +161,15 @@ body {
   font-family: "Noto Sans Georgian", sans-serif;
 }
 
-body main .advertise_container .ad_content {
+body main .advertise_container .ad_content, body main .selling_products_container .selling_products_content, body main .new_product_container .new_product_content, body header .underline {
   max-width: 111rem;
   width: 100%;
   margin: 0 auto;
 }
 
+body {
+  position: relative;
+}
 body header {
   background-color: black;
 }
@@ -177,12 +180,64 @@ body header .header_container {
   display: flex;
   justify-content: center;
 }
+@media only screen and (max-width: 1200px) {
+  body header .header_container {
+    padding: 0px 40px;
+  }
+}
 body header .header_container .header-content {
   max-width: 111rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+body header .header_container .header-content .burger_menu_phone_version {
+  display: none;
+}
+@media only screen and (max-width: 760px) {
+  body header .header_container .header-content .burger_menu_phone_version {
+    display: inline-block;
+  }
+}
+body header .header_container .header-content .logo {
+  display: flex;
+  align-items: center;
+  gap: 4.2rem;
+}
+@media only screen and (max-width: 760px) {
+  body header .header_container .header-content .logo {
+    justify-content: space-between;
+  }
+}
+body header .header_container .header-content .logo .burger_menu {
+  display: none;
+}
+@media only screen and (max-width: 1070px) {
+  body header .header_container .header-content .logo .burger_menu {
+    display: inline-block;
+    cursor: pointer;
+  }
+  body header .header_container .header-content .logo .burger_menu path {
+    transition: 250ms;
+  }
+  body header .header_container .header-content .logo .burger_menu:hover .burger_menu path {
+    fill: orange;
+    transition: 250ms;
+  }
+}
+body header .header_container .header-content .logo .burger_menu .cart_icon path {
+  transition: 250ms;
+}
+@media only screen and (max-width: 760px) {
+  body header .header_container .header-content .logo .burger_menu {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1070px) {
+  body header .header_container .header-content .navigation {
+    display: none;
+  }
 }
 body header .header_container .header-content .navigation nav ul {
   display: flex;
@@ -197,34 +252,90 @@ body header .header_container .header-content .navigation nav ul a {
   letter-spacing: 0.2rem;
   text-align: left;
 }
-body header .header_container .header-content .navigation nav ul a .cart_icon {
-  width: 24px;
-  height: 20px;
-}
-body header .header_container .header-content .navigation nav ul a .cart_icon path {
+body header .header_container .header-content .navigation nav ul a:hover {
+  color: #d87d4a;
   transition: 250ms;
 }
-body header .header_container .header-content .navigation nav ul a:hover .cart_icon path {
+body header .header_container .header-content .cart a .cart_icon path {
+  transition: 250ms;
+}
+body header .header_container .header-content .cart a:hover .cart_icon path {
+  fill: orange;
   transition: 250ms;
 }
 body header .underline {
-  max-width: 111rem;
-  width: 100%;
-  margin: 0 auto;
   background-color: #ffffff;
   height: 0.5rem;
   opacity: 20%;
+}
+@media only screen and (max-width: 1200px) {
+  body header .underline {
+    width: auto;
+    margin: 0 4rem;
+  }
+}
+
+body aside .sidebar_menu {
+  background-color: black;
+  position: absolute;
+  width: 300px;
+  height: 100vh;
+  left: -300px;
+  z-index: 7;
+  padding-left: 4rem;
+  transition: left 0.5s ease-in-out;
+}
+body aside .sidebar_menu .sidebar_nav nav ul {
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+body aside .sidebar_menu .sidebar_nav nav ul a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  letter-spacing: 0.2rem;
+  text-align: left;
+}
+body aside .active {
+  left: 0px;
+}
+body aside .overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 6;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+body aside .overlay.hidden {
+  display: none;
+}
+
+body.noScroll {
+  overflow: hidden;
 }
 
 body main .new_product_container {
   background-color: black;
 }
+@media only screen and (max-width: 1200px) {
+  body main .new_product_container {
+    padding: 0 4rem;
+  }
+}
 body main .new_product_container .new_product_content {
-  max-width: 111rem;
-  width: 100%;
-  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  position: relative;
+}
+@media only screen and (max-width: 1070px) {
+  body main .new_product_container .new_product_content {
+    justify-content: center;
+    align-items: center;
+  }
 }
 body main .new_product_container .new_product_content .np_desc_div {
   display: flex;
@@ -233,13 +344,27 @@ body main .new_product_container .new_product_content .np_desc_div {
   gap: 2.4rem;
   color: #ffffff;
   flex: 0.6;
+  z-index: 2;
+  text-align: left;
+}
+@media only screen and (max-width: 1070px) {
+  body main .new_product_container .new_product_content .np_desc_div {
+    text-align: center;
+    flex: 1;
+    z-index: 2;
+    padding: 12.6rem 12rem 0;
+  }
+}
+@media only screen and (max-width: 760px) {
+  body main .new_product_container .new_product_content .np_desc_div {
+    padding: 10.8rem 3.5rem 0;
+  }
 }
 body main .new_product_container .new_product_content .np_desc_div .new_product {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.912rem;
   letter-spacing: 1rem;
-  text-align: left;
   opacity: 49%;
 }
 body main .new_product_container .new_product_content .np_desc_div .product_name {
@@ -247,13 +372,41 @@ body main .new_product_container .new_product_content .np_desc_div .product_name
   font-weight: 700;
   line-height: 5.8rem;
   letter-spacing: 0.2rem;
-  text-align: left;
+}
+@media only screen and (max-width: 1070px) {
+  body main .new_product_container .new_product_content .np_desc_div .product_name {
+    font-size: 5.4rem;
+  }
+}
+@media only screen and (max-width: 760px) {
+  body main .new_product_container .new_product_content .np_desc_div .product_name {
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 4rem;
+    letter-spacing: 0.1285714269rem;
+  }
 }
 body main .new_product_container .new_product_content .np_desc_div .product_describtion {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 2.5rem;
-  text-align: left;
+}
+@media only screen and (max-width: 1070px) {
+  body main .new_product_container .new_product_content .np_desc_div .product_describtion {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 760px) {
+  body main .new_product_container .new_product_content .np_desc_div .product_describtion {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+}
+@media only screen and (max-width: 1070px) {
+  body main .new_product_container .new_product_content .np_desc_div .btn_wrapper {
+    margin-bottom: 16.7rem;
+    text-align: center;
+  }
 }
 body main .new_product_container .new_product_content .np_desc_div .btn_wrapper .btn_see_product {
   background-color: #d87d4a;
@@ -270,25 +423,56 @@ body main .new_product_container .new_product_content .np_desc_div .btn_wrapper 
 body main .new_product_container .new_product_content .np_img_div {
   flex: 0.4;
 }
+@media only screen and (max-width: 1070px) {
+  body main .new_product_container .new_product_content .np_img_div {
+    z-index: 1;
+    position: absolute;
+    top: -20;
+    -o-object-position: center;
+       object-position: center;
+  }
+}
 body main .new_product_container .new_product_content .np_img_div img {
-  max-width: 58rem;
-  height: 54rem;
+  max-width: 58.1rem;
+  width: 100%;
+}
+@media only screen and (max-width: 1070px) {
+  body main .new_product_container .new_product_content .np_img_div img {
+    width: 100%;
+  }
 }
 body main .selling_products_container .selling_products_content {
-  max-width: 111rem;
-  width: 100%;
-  margin: 0 auto;
   display: grid;
   padding-top: 12rem;
-  position: relative;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
 }
+@media only screen and (max-width: 1200px) {
+  body main .selling_products_container .selling_products_content {
+    padding: 0 4rem;
+    padding-top: 9.6rem;
+    gap: 1rem;
+  }
+}
+@media only screen and (max-width: 760px) {
+  body main .selling_products_container .selling_products_content {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+    justify-items: center;
+  }
+}
 body main .selling_products_container .selling_products_content .product_div {
+  max-width: 35rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+@media only screen and (max-width: 760px) {
+  body main .selling_products_container .selling_products_content .product_div {
+    width: 100%;
+  }
 }
 body main .selling_products_container .selling_products_content .product_div .image_wrapper {
   position: relative;
@@ -309,14 +493,29 @@ body main .selling_products_container .selling_products_content .product_div .pr
   letter-spacing: 0.1285714269rem;
   margin-top: 3.3rem;
 }
-body main .selling_products_container .selling_products_content .product_div .shop_container {
+@media only screen and (max-width: 1050px) {
+  body main .selling_products_container .selling_products_content .product_div .product_name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2.049rem;
+    letter-spacing: 0.1071428537rem;
+    text-align: center;
+  }
+}
+body main .selling_products_container .selling_products_content .product_div .shop_btn_wrapper {
+  cursor: pointer;
   display: flex;
   margin-top: 1.5rem;
   align-items: center;
   margin-bottom: 3rem;
 }
-body main .selling_products_container .selling_products_content .product_div .shop_container .shop {
-  font-family: Manrope;
+@media only screen and (max-width: 1050px) {
+  body main .selling_products_container .selling_products_content .product_div .shop_btn_wrapper {
+    margin-top: 1.7rem;
+    margin-bottom: 2.2rem;
+  }
+}
+body main .selling_products_container .selling_products_content .product_div .shop_btn_wrapper .shop {
   font-size: 1.3rem;
   font-weight: 700;
   line-height: 1.776rem;
@@ -324,18 +523,23 @@ body main .selling_products_container .selling_products_content .product_div .sh
   text-align: left;
   margin-right: 1.32rem;
 }
-body main .selling_products_container .selling_products_content .product_div .shop_container .arrow {
+body main .selling_products_container .selling_products_content .product_div .shop_btn_wrapper .arrow {
   width: 0.5rem;
   height: 1rem;
 }
 body main .selling_products_container .selling_products_content .product_div .div_bg {
   position: absolute;
-  width: 35rem;
-  height: 3rem;
+  width: 100%;
   background-color: #f1f1f1;
   bottom: 0;
   height: 20.4rem;
   z-index: -1;
+}
+@media only screen and (max-width: 760px) {
+  body main .selling_products_container .selling_products_content .product_div .div_bg {
+    flex: 1;
+    width: 100%;
+  }
 }
 body main .advertise_container {
   margin-top: 11.2rem;
@@ -345,17 +549,34 @@ body main .advertise_container .ad_content {
   align-items: center;
   gap: 12.5rem;
 }
+@media only screen and (max-width: 1200px) {
+  body main .advertise_container .ad_content {
+    padding: 0px 40px;
+  }
+}
+@media only screen and (max-width: 1070px) {
+  body main .advertise_container .ad_content {
+    flex-direction: column;
+    gap: 6.3rem;
+  }
+}
 body main .advertise_container .ad_content .ad_describtion_text {
   flex: 0.5;
 }
-body main .advertise_container .ad_content .ad_describtion_text h3 {
+body main .advertise_container .ad_content .ad_describtion_text h2 {
   font-size: 4rem;
   font-weight: 700;
   line-height: 4.4rem;
   letter-spacing: 0.1428571463rem;
   text-align: left;
 }
-body main .advertise_container .ad_content .ad_describtion_text h3 span {
+@media only screen and (max-width: 1070px) {
+  body main .advertise_container .ad_content .ad_describtion_text h2 {
+    margin-bottom: 3.2rem;
+    text-align: center;
+  }
+}
+body main .advertise_container .ad_content .ad_describtion_text h2 span {
   color: #d87d4a;
 }
 body main .advertise_container .ad_content .ad_describtion_text p {
@@ -365,6 +586,31 @@ body main .advertise_container .ad_content .ad_describtion_text p {
   text-align: left;
   margin-top: 3.2rem;
 }
+@media only screen and (max-width: 1070px) {
+  body main .advertise_container .ad_content .ad_describtion_text p {
+    text-align: center;
+  }
+}
 body main .advertise_container .ad_content .ad_img {
   flex: 0.5;
+  justify-self: center;
+}
+@media only screen and (max-width: 1070px) {
+  body main .advertise_container .ad_content .ad_img {
+    order: -1;
+    flex: 1;
+    width: 100%;
+    max-height: 60rem;
+    min-height: 30rem;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: top;
+       object-position: top;
+    overflow: hidden;
+  }
+}
+body main .advertise_container .ad_content .ad_img img {
+  width: 100%;
+  -o-object-position: top;
+     object-position: top;
 }/*# sourceMappingURL=global.css.map */

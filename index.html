@@ -10,7 +10,32 @@
     <header>
       <div class="header_container">
         <div class="header-content">
+          <svg
+            class="burger_menu_phone_version burger_menu"
+            width="16"
+            height="15"
+            viewBox="0 0 16 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="16" height="3" fill="white" />
+            <rect y="6" width="16" height="3" fill="white" />
+            <rect y="12" width="16" height="3" fill="white" />
+          </svg>
           <div class="logo">
+            <svg
+              class="burger_menu"
+              width="16"
+              height="15"
+              viewBox="0 0 16 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="16" height="3" fill="white" />
+              <rect y="6" width="16" height="3" fill="white" />
+              <rect y="12" width="16" height="3" fill="white" />
+            </svg>
+
             <a href="#" class="logo">
               <img
                 src="./assets/svg/header/logo.svg"
@@ -22,10 +47,10 @@
           <div class="navigation">
             <nav>
               <ul>
-                <a href=""> <li>HOME</li></a>
-                <a href="#products"> <li>PRODUCTS</li></a>
-                <a href=""> <li>FEEDBACK</li></a>
-                <a href=""> <li>SALES</li></a>
+                <li><a href=""> HOME </a></li>
+                <li><a href="#products"> PRODUCTS </a></li>
+                <li><a href=""> FEEDBACK </a></li>
+                <li><a href=""> SALES </a></li>
               </ul>
             </nav>
           </div>
@@ -52,6 +77,21 @@
       </div>
       <div class="underline"></div>
     </header>
+    <aside id="sidebar" class="hidden_aside">
+      <div class="sidebar_menu">
+        <div class="sidebar_nav">
+          <nav>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="overlay hidden"></div>
+    </aside>
     <main>
       <section class="new_product_container">
         <div class="new_product_content">
@@ -86,7 +126,7 @@
               />
             </div>
             <span class="product_name">HEADPHONES</span>
-            <div class="shop_container">
+            <div class="shop_btn_wrapper">
               <span class="shop">SHOP</span>
               <img
                 class="arrow"
@@ -105,7 +145,7 @@
               />
             </div>
             <span class="product_name speaker">SPEAKERS</span>
-            <div class="shop_container">
+            <div class="shop_btn_wrapper">
               <span class="shop">SHOP</span>
               <img
                 class="arrow"
@@ -124,7 +164,7 @@
               />
             </div>
             <span class="product_name">EARPHONES</span>
-            <div class="shop_container">
+            <div class="shop_btn_wrapper">
               <span class="shop">SHOP</span>
               <img
                 class="arrow"
@@ -139,7 +179,7 @@
       <section class="advertise_container">
         <div class="ad_content">
           <div class="ad_describtion_text">
-            <h3>Bringing you the <span>best</span> audio gear</h3>
+            <h2>Bringing you the <span>best</span> audio gear</h2>
             <p>
               Located at the heart of New York City, Audiophile is the premier
               store for high end headphones, earphones, speakers, and audio
@@ -159,5 +199,15 @@
         </div>
       </section>
     </main>
+    <footer>
+      <div class="footer_container">
+        <div class="footer_content">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/aside.js"></script>
   </body>
 </html>

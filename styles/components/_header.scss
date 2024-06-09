@@ -1,4 +1,5 @@
 body {
+  position: relative;
   header {
     background-color: black;
     .header_container {
@@ -8,6 +9,10 @@ body {
       display: flex;
       justify-content: center;
 
+      @include responsive(pc) {
+        padding: 0px 40px;
+      }
+
       .header-content {
         max-width: 111rem;
         width: 100%;
@@ -15,7 +20,55 @@ body {
         justify-content: space-between;
         align-items: center;
 
+        .burger_menu_phone_version {
+          display: none;
+
+          @include responsive(phone) {
+            display: inline-block;
+          }
+        }
+        .logo {
+          display: flex;
+          align-items: center;
+          gap: 4.2rem;
+
+          @include responsive(phone) {
+            justify-content: space-between;
+          }
+
+          .burger_menu {
+            display: none;
+
+            @include responsive(tablet) {
+              display: inline-block;
+              cursor: pointer;
+              path {
+                transition: 250ms;
+              }
+              &:hover {
+                .burger_menu {
+                  path {
+                    fill: orange;
+                    transition: 250ms;
+                  }
+                }
+              }
+            }
+
+            .cart_icon {
+              path {
+                transition: 250ms;
+              }
+            }
+            @include responsive(phone) {
+              display: none;
+            }
+          }
+        }
         .navigation {
+          @include responsive(tablet) {
+            display: none;
+          }
           nav {
             ul {
               display: flex;
@@ -29,20 +82,27 @@ body {
                 line-height: 2.5rem;
                 letter-spacing: 0.2rem;
                 text-align: left;
-                .cart_icon {
-                  width: 24px;
-                  height: 20px;
-                  path {
-                    transition: 250ms;
-                  }
-                }
-                &:hover {
-                  .cart_icon {
-                    path {
-                      // fill: $button-bg-color;
-                      transition: 250ms;
-                    }
-                  }
+              }
+
+              a:hover {
+                color: $button-bg-color;
+                transition: 250ms;
+              }
+            }
+          }
+        }
+        .cart {
+          a {
+            .cart_icon {
+              path {
+                transition: 250ms;
+              }
+            }
+            &:hover {
+              .cart_icon {
+                path {
+                  fill: orange;
+                  transition: 250ms;
                 }
               }
             }
@@ -51,12 +111,15 @@ body {
       }
     }
     .underline {
-      max-width: 111rem;
-      width: 100%;
-      margin: 0 auto;
+      @extend %contentDiv;
       background-color: $main-bg-color;
       height: 0.5rem;
       opacity: 20%;
+
+      @include responsive(pc) {
+        width: auto;
+        margin: 0 4rem;
+      }
     }
   }
 }

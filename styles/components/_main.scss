@@ -1,13 +1,20 @@
 body {
   main {
     .new_product_container {
+      @include responsive(pc) {
+        padding: 0 4rem;
+      }
       background-color: black;
+
       .new_product_content {
-        max-width: 111rem;
-        width: 100%;
-        margin: 0 auto;
+        @extend %contentDiv;
         display: flex;
-        justify-content: space-between;
+        @include responsive(tablet) {
+          justify-content: center;
+          align-items: center;
+        }
+        position: relative;
+
         .np_desc_div {
           display: flex;
           flex-direction: column;
@@ -15,13 +22,26 @@ body {
           gap: 2.4rem;
           color: $main-bg-color;
           flex: 0.6;
+          z-index: 2;
+          text-align: left;
+
+          @include responsive(tablet) {
+            text-align: center;
+            flex: 1;
+            z-index: 2;
+            padding: 12.6rem 12rem 0;
+          }
+
+          @include responsive(phone) {
+            padding: 10.8rem 3.5rem 0;
+          }
 
           .new_product {
             font-size: 1.4rem;
             font-weight: 400;
             line-height: 1.912rem;
             letter-spacing: 1rem;
-            text-align: left;
+
             opacity: 49%;
           }
 
@@ -30,15 +50,38 @@ body {
             font-weight: 700;
             line-height: 5.8rem;
             letter-spacing: 0.2rem;
-            text-align: left;
+
+            @include responsive(tablet) {
+              font-size: 5.4rem;
+            }
+
+            @include responsive(phone) {
+              font-size: 3.6rem;
+              font-weight: 700;
+              line-height: 4rem;
+              letter-spacing: 0.12857142686843872rem;
+            }
           }
           .product_describtion {
             font-size: 1.5rem;
             font-weight: 500;
             line-height: 2.5rem;
-            text-align: left;
+
+            @include responsive(tablet) {
+              font-size: 1.5rem;
+            }
+
+            @include responsive(phone) {
+              font-size: 1.4rem;
+              font-weight: 400;
+            }
           }
           .btn_wrapper {
+            @include responsive(tablet) {
+              margin-bottom: 16.7rem;
+
+              text-align: center;
+            }
             .btn_see_product {
               background-color: $button-bg-color;
               color: $main-bg-color;
@@ -55,30 +98,58 @@ body {
         }
         .np_img_div {
           flex: 0.4;
+
+          @include responsive(tablet) {
+            z-index: 1;
+            position: absolute;
+            top: -20;
+            object-position: center;
+          }
+
           img {
-            max-width: 58rem;
-            height: 54rem;
+            max-width: 58.1rem;
+            width: 100%;
+
+            @include responsive(tablet) {
+              width: 100%;
+            }
           }
         }
       }
     }
     .selling_products_container {
       .selling_products_content {
-        max-width: 111rem;
-        width: 100%;
-        margin: 0 auto;
+        @extend %contentDiv;
 
         display: grid;
         padding-top: 12rem;
-        position: relative;
         grid-template-columns: repeat(3, 1fr);
         gap: 3rem;
 
+        @include responsive(pc) {
+          padding: 0 4rem;
+          padding-top: 9.6rem;
+          gap: 1rem;
+        }
+
+        @include responsive(phone) {
+          grid-template-columns: 1fr;
+          gap: 1.6rem;
+          justify-items: center;
+        }
+
         .product_div {
+          max-width: 35rem;
           display: flex;
           justify-content: space-between;
           flex-direction: column;
           align-items: center;
+          position: relative;
+
+          @include responsive(phone) {
+            width: 100%;
+          }
+
           .image_wrapper {
             position: relative;
             .product_image {
@@ -96,17 +167,28 @@ body {
             font-weight: 700;
             line-height: 2.459rem;
             letter-spacing: 0.12857142686843872rem;
-            // text-align: center;
             margin-top: 3.3rem;
-            // margin: 3.6rem 10.8rem 0 10.8rem;
+
+            @include responsive(l-tablet) {
+              font-size: 1.5rem;
+              font-weight: 700;
+              line-height: 2.049rem;
+              letter-spacing: 0.10714285373687744rem;
+              text-align: center;
+            }
           }
-          .shop_container {
+          .shop_btn_wrapper {
+            cursor: pointer;
             display: flex;
             margin-top: 1.5rem;
             align-items: center;
             margin-bottom: 3rem;
+
+            @include responsive(l-tablet) {
+              margin-top: 1.7rem;
+              margin-bottom: 2.2rem;
+            }
             .shop {
-              font-family: Manrope;
               font-size: 1.3rem;
               font-weight: 700;
               line-height: 1.776rem;
@@ -121,12 +203,18 @@ body {
           }
           .div_bg {
             position: absolute;
-            width: 35rem;
-            height: 3rem;
+            width: 100%;
+
             background-color: $sec2-bg-color;
             bottom: 0;
+
             height: 20.4rem;
             z-index: -1;
+
+            @include responsive(phone) {
+              flex: 1;
+              width: 100%;
+            }
           }
         }
       }
@@ -138,14 +226,30 @@ body {
         display: flex;
         align-items: center;
         gap: 12.5rem;
+
+        @include responsive(pc) {
+          padding: 0px 40px;
+        }
+
+        @include responsive(tablet) {
+          flex-direction: column;
+          gap: 6.3rem;
+        }
+
         .ad_describtion_text {
           flex: 0.5;
-          h3 {
+          h2 {
             font-size: 4rem;
             font-weight: 700;
             line-height: 4.4rem;
             letter-spacing: 0.14285714626312256rem;
             text-align: left;
+
+            @include responsive(tablet) {
+              margin-bottom: 3.2rem;
+              text-align: center;
+            }
+
             span {
               color: $button-bg-color;
             }
@@ -156,10 +260,32 @@ body {
             line-height: 2.5rem;
             text-align: left;
             margin-top: 3.2rem;
+
+            @include responsive(tablet) {
+              text-align: center;
+            }
           }
         }
         .ad_img {
           flex: 0.5;
+          justify-self: center;
+          @include responsive(tablet) {
+            order: -1;
+            flex: 1;
+            width: 100%;
+
+            max-height: 60rem;
+            min-height: 30rem;
+            object-fit: contain;
+            object-position: top;
+            overflow: hidden;
+          }
+          img {
+            width: 100%;
+            object-position: top;
+
+            // object-position: top;
+          }
         }
       }
     }
