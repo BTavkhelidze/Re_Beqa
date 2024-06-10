@@ -10,6 +10,10 @@ body {
       z-index: 7;
       padding-left: 4rem;
       transition: left 0.5s ease-in-out;
+
+      @include responsive(phone) {
+        width: 200px;
+      }
       .sidebar_nav {
         nav {
           ul {
@@ -17,14 +21,24 @@ body {
             display: flex;
             flex-direction: column;
             gap: 4rem;
+
+            @include responsive(phone) {
+              margin-top: 8rem;
+              gap: 3.5rem;
+            }
             a {
               text-decoration: none;
               color: $main-bg-color;
-              font-size: 2rem;
+              font-size: 1.8rem;
               font-weight: 700;
               line-height: 2.5rem;
               letter-spacing: 0.2rem;
               text-align: left;
+
+              @include responsive(phone) {
+                font-size: 1.4rem;
+                line-height: 2rem;
+              }
             }
           }
         }

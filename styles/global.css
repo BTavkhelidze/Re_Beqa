@@ -161,7 +161,7 @@ body {
   font-family: "Noto Sans Georgian", sans-serif;
 }
 
-body main .advertise_container .ad_content, body main .selling_products_container .selling_products_content, body main .new_product_container .new_product_content, body header .underline {
+body footer .footer_container .footer_content, body main .advertise_container .ad_content, body main .selling_products_container .selling_products_content, body main .new_product_container .new_product_content, body header .underline {
   max-width: 111rem;
   width: 100%;
   margin: 0 auto;
@@ -285,20 +285,37 @@ body aside .sidebar_menu {
   padding-left: 4rem;
   transition: left 0.5s ease-in-out;
 }
+@media only screen and (max-width: 760px) {
+  body aside .sidebar_menu {
+    width: 200px;
+  }
+}
 body aside .sidebar_menu .sidebar_nav nav ul {
   margin-top: 10rem;
   display: flex;
   flex-direction: column;
   gap: 4rem;
 }
+@media only screen and (max-width: 760px) {
+  body aside .sidebar_menu .sidebar_nav nav ul {
+    margin-top: 8rem;
+    gap: 3.5rem;
+  }
+}
 body aside .sidebar_menu .sidebar_nav nav ul a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   line-height: 2.5rem;
   letter-spacing: 0.2rem;
   text-align: left;
+}
+@media only screen and (max-width: 760px) {
+  body aside .sidebar_menu .sidebar_nav nav ul a {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
 }
 body aside .active {
   left: 0px;
@@ -613,4 +630,159 @@ body main .advertise_container .ad_content .ad_img img {
   width: 100%;
   -o-object-position: top;
      object-position: top;
+}
+
+body footer {
+  background-color: black;
+}
+body footer .footer_container {
+  margin-top: 50rem;
+}
+@media only screen and (max-width: 1200px) {
+  body footer .footer_container {
+    padding: 0px 40px;
+  }
+}
+body footer .footer_container .footer_content {
+  padding-top: 7.5rem;
+}
+@media only screen and (max-width: 1070px) {
+  body footer .footer_container .footer_content {
+    padding-top: 5.6rem;
+  }
+}
+@media only screen and (max-width: 760px) {
+  body footer .footer_container .footer_content {
+    padding-top: 4.8rem;
+  }
+}
+body footer .footer_container .footer_content .footer_logo_nav {
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 1070px) {
+  body footer .footer_container .footer_content .footer_logo_nav {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+}
+@media only screen and (max-width: 760px) {
+  body footer .footer_container .footer_content .footer_logo_nav {
+    align-items: center;
+    gap: 4.8rem;
+  }
+}
+body footer .footer_container .footer_content .footer_logo_nav nav ul {
+  display: flex;
+  gap: 3.4rem;
+}
+@media only screen and (max-width: 760px) {
+  body footer .footer_container .footer_content .footer_logo_nav nav ul {
+    gap: 1.6rem;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+body footer .footer_container .footer_content .footer_logo_nav nav ul a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  letter-spacing: 0.2rem;
+  text-align: left;
+}
+body footer .footer_container .footer_content .footer_logo_nav nav ul a:hover {
+  color: orange;
+  transition: 250ms;
+}
+body footer .footer_container .footer_content .footer_about_us {
+  margin-top: 3.6rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: white;
+}
+@media only screen and (max-width: 1070px) {
+  body footer .footer_container .footer_content .footer_about_us {
+    margin-top: 3.2rem;
+  }
+}
+@media only screen and (max-width: 760px) {
+  body footer .footer_container .footer_content .footer_about_us {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin-top: 4.6rem;
+  }
+}
+body footer .footer_container .footer_content .footer_about_us .about_us {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  text-align: left;
+  opacity: 0.5;
+}
+@media only screen and (max-width: 1070px) {
+  body footer .footer_container .footer_content .footer_about_us .about_us {
+    grid-column: 1/-1;
+  }
+}
+@media only screen and (max-width: 760px) {
+  body footer .footer_container .footer_content .footer_about_us .about_us {
+    text-align: center;
+  }
+}
+body footer .footer_container .footer_content .footer_about_us nav {
+  right: 0;
+  justify-self: flex-end;
+  align-self: flex-end;
+  gap: 2rem;
+}
+@media only screen and (max-width: 1070px) {
+  body footer .footer_container .footer_content .footer_about_us nav {
+    justify-self: flex-end;
+    margin-bottom: 4.6rem;
+  }
+}
+@media only screen and (max-width: 760px) {
+  body footer .footer_container .footer_content .footer_about_us nav {
+    justify-self: center;
+    margin-bottom: 3.8rem;
+    gap: 1.6rem;
+  }
+}
+body footer .footer_container .footer_content .footer_about_us nav ul {
+  display: flex;
+}
+body footer .footer_container .footer_content .footer_about_us nav ul li:not(:last-child) {
+  margin-right: 1.6rem;
+}
+body footer .footer_container .footer_content .footer_about_us nav ul li:not(:last-child) a .online_platform path {
+  transition: 250ms;
+}
+body footer .footer_container .footer_content .footer_about_us nav ul li:not(:last-child) a:hover .online_platform path {
+  fill: orange;
+  transition: 250ms;
+}
+body footer .footer_container .footer_content .footer_about_us .copyright {
+  margin-top: 5.6rem;
+  margin-bottom: 4.8rem;
+  opacity: 0.5;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  text-align: left;
+}
+@media only screen and (max-width: 1070px) {
+  body footer .footer_container .footer_content .footer_about_us .copyright {
+    grid-area: 2/1;
+    margin-top: 8rem;
+    margin-bottom: 4.6rem;
+    align-self: center;
+  }
+}
+@media only screen and (max-width: 760px) {
+  body footer .footer_container .footer_content .footer_about_us .copyright {
+    margin-top: 4.8rem;
+    margin-bottom: 4.6rem;
+  }
 }/*# sourceMappingURL=global.css.map */
