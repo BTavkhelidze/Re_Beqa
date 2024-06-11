@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="./styles/global.css" />
     <title>Final</title>
   </head>
@@ -94,7 +96,7 @@
       <div class="overlay hidden"></div>
     </aside>
     <main>
-      <section class="new_product_container">
+      <section class="new_product_container" data-aos="fade-up">
         <div class="new_product_content">
           <div class="np_desc_div">
             <p class="new_product">NEW PRODUCT</p>
@@ -116,7 +118,11 @@
           </div>
         </div>
       </section>
-      <section class="selling_products_container" id="products">
+      <section
+        class="selling_products_container"
+        id="products"
+        data-aos="fade-up"
+      >
         <div class="selling_products_content">
           <div class="product_div">
             <div class="image_wrapper">
@@ -177,9 +183,9 @@
           </div>
         </div>
       </section>
-      <section class="advertise_container">
+      <section class="advertise_container" data-aos="fade-up">
         <div class="ad_content">
-          <div class="ad_describtion_text">
+          <div class="ad_describtion_text" data-aos="fade-right">
             <h2>Bringing you the <span>best</span> audio gear</h2>
             <p>
               Located at the heart of New York City, Audiophile is the premier
@@ -191,7 +197,7 @@
               audio equipment.
             </p>
           </div>
-          <div class="ad_img">
+          <div class="ad_img" data-aos="fade-left">
             <img
               src="./assets/webp/main/sec3/sec3-person.webp"
               alt="person with headphone"
@@ -200,7 +206,7 @@
         </div>
       </section>
     </main>
-    <footer>
+    <footer data-aos="fade-up">
       <div class="footer_container">
         <div class="footer_content">
           <div class="footer_logo_nav">
@@ -291,6 +297,9 @@
       </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script src="./js/aside.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
