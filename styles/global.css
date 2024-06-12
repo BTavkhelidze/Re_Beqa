@@ -161,7 +161,12 @@ body {
   font-family: "Noto Sans Georgian", sans-serif;
 }
 
-body footer .footer_container .footer_content, body main .advertise_container .ad_content, body main .selling_products_container .selling_products_content, body main .new_product_container .new_product_content, body header .underline {
+body main .customer_reviews_container .customer_reviews_container .costumers_review_header {
+  display: flex;
+  justify-content: space-between;
+}
+
+body footer .footer_container .footer_content, body main .customer_reviews_container .customer_reviews_container, body main .advertise_container .ad_content, body main .selling_products_container .selling_products_content, body main .new_product_container .new_product_content, body header .underline {
   max-width: 111rem;
   width: 100%;
   margin: 0 auto;
@@ -631,6 +636,76 @@ body main .advertise_container .ad_content .ad_img img {
   -o-object-position: top;
      object-position: top;
 }
+body main .customer_reviews_container .customer_reviews_container {
+  padding-top: 12rem;
+}
+@media only screen and (max-width: 1200px) {
+  body main .customer_reviews_container .customer_reviews_container {
+    padding: 0px 40px;
+    padding-top: 12rem;
+  }
+}
+body main .customer_reviews_container .customer_reviews_container .costumers_review_header h2 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 5.76rem;
+  text-align: left;
+}
+body main .customer_reviews_container .customer_reviews_container .costumers_review_header div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.432rem;
+}
+body main .customer_reviews_container .costumer_review_wrapper {
+  margin-top: 5.3rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.8rem;
+}
+@media only screen and (max-width: 1070px) {
+  body main .customer_reviews_container .costumer_review_wrapper {
+    gap: 1rem;
+  }
+}
+@media only screen and (max-width: 760px) {
+  body main .customer_reviews_container .costumer_review_wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.8rem;
+  }
+}
+body main .customer_reviews_container .costumer_review_wrapper .costumer_review {
+  padding: 2.8rem 3.2rem;
+  border: 1px black solid;
+  border-radius: 2rem;
+  max-width: 35rem;
+}
+body main .customer_reviews_container .costumer_review_wrapper .costumer_review .review_star {
+  display: flex;
+  gap: 0.6rem;
+}
+body main .customer_reviews_container .costumer_review_wrapper .costumer_review div {
+  margin-top: 1.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+body main .customer_reviews_container .costumer_review_wrapper .costumer_review div .costumer_name {
+  font-family: Satoshi;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.2rem;
+  text-align: left;
+}
+body main .customer_reviews_container .costumer_review_wrapper .costumer_review p {
+  margin-top: 2rem;
+  font-family: Noto Sans Georgian;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+  text-align: left;
+}
 
 body footer {
   background-color: black;
@@ -731,35 +806,35 @@ body footer .footer_container .footer_content .footer_about_us .about_us {
     text-align: center;
   }
 }
-body footer .footer_container .footer_content .footer_about_us nav {
+body footer .footer_container .footer_content .footer_about_us .online_sources {
   right: 0;
   justify-self: flex-end;
   align-self: flex-end;
   gap: 2rem;
 }
 @media only screen and (max-width: 1070px) {
-  body footer .footer_container .footer_content .footer_about_us nav {
+  body footer .footer_container .footer_content .footer_about_us .online_sources {
     justify-self: flex-end;
     margin-bottom: 4.6rem;
   }
 }
 @media only screen and (max-width: 760px) {
-  body footer .footer_container .footer_content .footer_about_us nav {
+  body footer .footer_container .footer_content .footer_about_us .online_sources {
     justify-self: center;
     margin-bottom: 3.8rem;
     gap: 1.6rem;
   }
 }
-body footer .footer_container .footer_content .footer_about_us nav ul {
+body footer .footer_container .footer_content .footer_about_us .online_sources ul {
   display: flex;
 }
-body footer .footer_container .footer_content .footer_about_us nav ul li:not(:last-child) {
+body footer .footer_container .footer_content .footer_about_us .online_sources ul li:not(:last-child) {
   margin-right: 1.6rem;
 }
-body footer .footer_container .footer_content .footer_about_us nav ul li:not(:last-child) a .online_platform path {
+body footer .footer_container .footer_content .footer_about_us .online_sources ul li:not(:last-child) a .online_platform path {
   transition: 250ms;
 }
-body footer .footer_container .footer_content .footer_about_us nav ul li:not(:last-child) a:hover .online_platform path {
+body footer .footer_container .footer_content .footer_about_us .online_sources ul li:not(:last-child) a:hover .online_platform path {
   fill: orange;
   transition: 250ms;
 }
