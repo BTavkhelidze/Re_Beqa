@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
     <link rel="stylesheet" href="./styles/global.css" />
     <title>Final</title>
@@ -96,7 +100,7 @@
       <div class="overlay hidden"></div>
     </aside>
     <main>
-      <section class="new_product_container" data-aos="fade-up">
+      <section class="new_product_container">
         <div class="new_product_content">
           <div class="np_desc_div">
             <p class="new_product">NEW PRODUCT</p>
@@ -213,126 +217,197 @@
         <div class="customer_reviews_container">
           <div class="costumers_review_header" data-aos="fade-up">
             <h2>OUR HAPPY CUSTOMERS</h2>
-            <div>
+            <div class="swiper_btn">
               <img
                 src="./assets/svg/costumers_reviews/left_arrow.svg"
                 alt="left direction arrow icon"
+                class="swiper-button-prev"
               />
               <img
                 src="./assets/svg/costumers_reviews/right_arrow.svg"
                 alt="right direction arrow icon"
+                class="swiper-button-next"
               />
             </div>
           </div>
-          <div class="costumer_review_wrapper" data-aos="fade-up">
-            <div class="costumer_review">
-              <div class="review_star">
-                <img
-                  src="./assets/svg/costumers_reviews/star.svg"
-                  alt="review star"
-                />
-                <img
-                  src="./assets/svg/costumers_reviews/star.svg"
-                  alt="review star"
-                />
-                <img
-                  src="./assets/svg/costumers_reviews/star.svg"
-                  alt="review star"
-                />
-                <img
-                  src="./assets/svg/costumers_reviews/star.svg"
-                  alt="review star"
-                />
-                <img
-                  src="./assets/svg/costumers_reviews/star.svg"
-                  alt="review star"
-                />
+          <div
+            class="costumer_review_wrapper swiper mySwiper"
+            data-aos="fade-up"
+          >
+            <div class="swiper-wrapper">
+              <div class="costumer_review swiper-slide">
+                <div class="review_star">
+                  <img
+                    src="./assets/svg/costumers_reviews/star.svg"
+                    alt="review star"
+                  />
+                  <img
+                    src="./assets/svg/costumers_reviews/star.svg"
+                    alt="review star"
+                  />
+                  <img
+                    src="./assets/svg/costumers_reviews/star.svg"
+                    alt="review star"
+                  />
+                  <img
+                    src="./assets/svg/costumers_reviews/star.svg"
+                    alt="review star"
+                  />
+                  <img
+                    src="./assets/svg/costumers_reviews/star.svg"
+                    alt="review star"
+                  />
+                </div>
+                <div>
+                  <h3 class="costumer_name">Sarah M.</h3>
+                  <img
+                    src="./assets/svg/costumers_reviews/verifiedIcon.svg"
+                    alt="verifiedIcon"
+                  />
+                </div>
+                <p>
+                  "I'm blown away by the quality and style of the clothes I
+                  received from Shop.co. From casual wear to elegant dresses,
+                  every piece I've bought has exceeded my expectations.”
+                </p>
               </div>
-              <div>
-                <h3 class="costumer_name">Sarah M.</h3>
-                <img
-                  src="./assets/svg/costumers_reviews/verifiedIcon.svg"
-                  alt="verifiedIcon"
-                />
+              <div class="costumer_review swiper-slide">
+                <div class="review_star">
+                  <img
+                    src="./assets/svg/costumers_reviews/star.svg"
+                    alt="review star"
+                  />
+                  <img
+                    src="./assets/svg/costumers_reviews/star.svg"
+                    alt="review star"
+                  />
+                  <img
+                    src="./assets/svg/costumers_reviews/star.svg"
+                    alt="review star"
+                  />
+                  <img
+                    src="./assets/svg/costumers_reviews/star.svg"
+                    alt="review star"
+                  />
+                  <img
+                    src="./assets/svg/costumers_reviews/star.svg"
+                    alt="review star"
+                  />
+                </div>
+                <div>
+                  <h3 class="costumer_name">Sarah M.</h3>
+                  <img
+                    src="./assets/svg/costumers_reviews/verifiedIcon.svg"
+                    alt="verifiedIcon"
+                  />
+                </div>
+                <p>
+                  "I'm blown away by the quality and style of the clothes I
+                  received from Shop.co. From casual wear to elegant dresses,
+                  every piece I've bought has exceeded my expectations.”
+                </p>
               </div>
-              <p>
-                "I'm blown away by the quality and style of the clothes I
-                received from Shop.co. From casual wear to elegant dresses,
-                every piece I've bought has exceeded my expectations.”
-              </p>
+              <div class="costumer_review swiper-slide">
+                <div class="review_star">
+                  <img
+                    src="./assets/svg/costumers_reviews/star.svg"
+                    alt="review star"
+                  />
+                  <img
+                    src="./assets/svg/costumers_reviews/star.svg"
+                    alt="review star"
+                  />
+                  <img
+                    src="./assets/svg/costumers_reviews/star.svg"
+                    alt="review star"
+                  />
+                  <img
+                    src="./assets/svg/costumers_reviews/star.svg"
+                    alt="review star"
+                  />
+                  <img
+                    src="./assets/svg/costumers_reviews/star.svg"
+                    alt="review star"
+                  />
+                </div>
+                <div>
+                  <h3 class="costumer_name">Sarah M.</h3>
+                  <img
+                    src="./assets/svg/costumers_reviews/verifiedIcon.svg"
+                    alt="verifiedIcon"
+                  />
+                </div>
+                <p>
+                  "I'm blown away by the quality and style of the clothes I
+                  received from Shop.co. From casual wear to elegant dresses,
+                  every piece I've bought has exceeded my expectations.”
+                </p>
+              </div>
+              <div class="costumer_review swiper-slide">
+                <div class="review_star">
+                  <img
+                    src="./assets/svg/costumers_reviews/star.svg"
+                    alt="review star"
+                  />
+                  <img
+                    src="./assets/svg/costumers_reviews/star.svg"
+                    alt="review star"
+                  />
+                  <img
+                    src="./assets/svg/costumers_reviews/star.svg"
+                    alt="review star"
+                  />
+                  <img
+                    src="./assets/svg/costumers_reviews/star.svg"
+                    alt="review star"
+                  />
+                  <img
+                    src="./assets/svg/costumers_reviews/star.svg"
+                    alt="review star"
+                  />
+                </div>
+                <div>
+                  <h3 class="costumer_name">Sarah M.</h3>
+                  <img
+                    src="./assets/svg/costumers_reviews/verifiedIcon.svg"
+                    alt="verifiedIcon"
+                  />
+                </div>
+                <p>
+                  "I'm blown away by the quality and style of the clothes I
+                  received from Shop.co. From casual wear to elegant dresses,
+                  every piece I've bought has exceeded my expectations.”
+                </p>
+              </div>
             </div>
-            <div class="costumer_review">
-              <div class="review_star">
-                <img
-                  src="./assets/svg/costumers_reviews/star.svg"
-                  alt="review star"
-                />
-                <img
-                  src="./assets/svg/costumers_reviews/star.svg"
-                  alt="review star"
-                />
-                <img
-                  src="./assets/svg/costumers_reviews/star.svg"
-                  alt="review star"
-                />
-                <img
-                  src="./assets/svg/costumers_reviews/star.svg"
-                  alt="review star"
-                />
-                <img
-                  src="./assets/svg/costumers_reviews/star.svg"
-                  alt="review star"
-                />
-              </div>
-              <div>
-                <h3 class="costumer_name">Sarah M.</h3>
-                <img
-                  src="./assets/svg/costumers_reviews/verifiedIcon.svg"
-                  alt="verifiedIcon"
-                />
-              </div>
-              <p>
-                "I'm blown away by the quality and style of the clothes I
-                received from Shop.co. From casual wear to elegant dresses,
-                every piece I've bought has exceeded my expectations.”
-              </p>
+          </div>
+        </div>
+      </section>
+      <section class="sale_offer_container">
+        <div class="sale_offer_content">
+          <div class="sale_off_header">
+            <h2>Big Summer Sale</h2>
+          </div>
+          <div class="sale_timer_wrapper">
+            <div class="count-down_div">
+              <p class="day"></p>
+              <p>DAYS</p>
             </div>
-            <div class="costumer_review">
-              <div class="review_star">
-                <img
-                  src="./assets/svg/costumers_reviews/star.svg"
-                  alt="review star"
-                />
-                <img
-                  src="./assets/svg/costumers_reviews/star.svg"
-                  alt="review star"
-                />
-                <img
-                  src="./assets/svg/costumers_reviews/star.svg"
-                  alt="review star"
-                />
-                <img
-                  src="./assets/svg/costumers_reviews/star.svg"
-                  alt="review star"
-                />
-                <img
-                  src="./assets/svg/costumers_reviews/star.svg"
-                  alt="review star"
-                />
-              </div>
-              <div>
-                <h3 class="costumer_name">Sarah M.</h3>
-                <img
-                  src="./assets/svg/costumers_reviews/verifiedIcon.svg"
-                  alt="verifiedIcon"
-                />
-              </div>
-              <p>
-                "I'm blown away by the quality and style of the clothes I
-                received from Shop.co. From casual wear to elegant dresses,
-                every piece I've bought has exceeded my expectations.”
-              </p>
+            <div class="count-down_div">
+              <p class="hours"></p>
+              <p>HOURS</p>
             </div>
+            <div class="count-down_div">
+              <p class="minuts"></p>
+              <p>MUNUTES</p>
+            </div>
+            <div class="count-down_div">
+              <p class="seconds"></p>
+              <p>SECONDS</p>
+            </div>
+          </div>
+          <div class="top_sale_products">
+            <p>Click to see <span> Sale Products</span></p>
           </div>
         </div>
       </section>
@@ -430,7 +505,11 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="./js/swiper.js"></script>
     <script src="./js/aside.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/saleOffer.js"></script>
   </body>
 </html>

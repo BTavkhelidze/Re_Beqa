@@ -301,19 +301,41 @@ body {
 
         .costumers_review_header {
           @extend %flex;
+          position: relative;
           h2 {
             font-size: 4.8rem;
             font-weight: 700;
             line-height: 5.76rem;
             text-align: left;
           }
-          div {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1.432rem;
+          // div {
+          //   // display: flex;
+          //   // align-items: center;
+          //   // justify-content: center;
+          //   // gap: 1.432rem;
+          // }
+          .swiper_btn {
+            position: relative;
+            // display: flex;
+            // flex-direction: column;
+            .swiper-button-prev {
+              // position: absolute;
+              // top: -10px;
+              left: var(--swiper-navigation-sides-offset, -80px);
+              // right: -30px;
+              // right: var(--swiper-navigation-size, 0);
+            }
+            .swiper-button-next {
+              position: absolute;
+
+              right: var(--swiper-navigation-sides-offset, 0px);
+            }
           }
         }
+      }
+      .swiper {
+        width: 100%;
+        height: 100%;
       }
       .costumer_review_wrapper {
         margin-top: 5.3rem;
@@ -329,38 +351,114 @@ body {
           align-items: center;
           gap: 2.8rem;
         }
+        .swiper-wrapper {
+          display: flex;
+          justify-content: space-between;
+          gap: 1.8rem;
 
-        .costumer_review {
-          padding: 2.8rem 3.2rem;
-          border: 1px black solid;
+          // .swiper-slide {
+          //   text-align: center;
+          //   font-size: 18px;
+          //   background: #fff;
+          //   display: flex;
+          //   flex-direction: column;
+          //   justify-content: center;
+          //   align-items: center;
+          // }
 
-          border-radius: 2rem;
+          .costumer_review {
+            padding: 2.8rem 3.2rem;
+            border: 1px black solid;
 
-          max-width: 35rem;
-          .review_star {
-            display: flex;
-            gap: 0.6rem;
-          }
-          div {
-            margin-top: 1.95rem;
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            .costumer_name {
-              font-family: Satoshi;
-              font-size: 2rem;
-              font-weight: 700;
+            border-radius: 2rem;
+
+            max-width: 35rem;
+            width: 100%;
+            .review_star {
+              display: flex;
+              gap: 0.6rem;
+            }
+            div {
+              margin-top: 1.95rem;
+              display: flex;
+              align-items: center;
+              gap: 0.4rem;
+              .costumer_name {
+                font-family: Satoshi;
+                font-size: 2rem;
+                font-weight: 700;
+                line-height: 2.2rem;
+                text-align: left;
+              }
+            }
+            p {
+              margin-top: 2rem;
+              font-family: Noto Sans Georgian;
+              font-size: 1.6rem;
+              font-weight: 400;
               line-height: 2.2rem;
               text-align: left;
             }
           }
+        }
+      }
+    }
+    .sale_offer_container {
+      .sale_offer_content {
+        @extend %contentDiv;
+        padding-top: 12rem;
+        @include responsive(pc) {
+          padding: 1.2rem 4rem;
+        }
+        .sale_off_header {
+          font-family: Noto Sans Georgian;
+          font-size: 4.8rem;
+          font-weight: 900;
+          line-height: 6.528rem;
+          text-align: left;
+        }
+        .sale_timer_wrapper {
+          display: flex;
+
+          gap: 3.6rem;
+          padding-top: 4.8rem;
+          // width: 100%;
+          // display: flex;
+          // justify-content: space-between;
+          .count-down_div {
+            border-radius: 2.2rem;
+            max-width: 25.2rem;
+            width: 100%;
+            padding: 4.6rem 3.6rem;
+            background-color: $bleck-color;
+            color: $main-bg-color;
+            p:first-child {
+              font-size: 6.4rem;
+              font-weight: 900;
+              line-height: 9.6rem;
+              text-align: center;
+            }
+            p:last-child {
+              font-size: 1.6rem;
+              font-weight: 300;
+              line-height: 2.4rem;
+              text-align: center;
+            }
+          }
+        }
+        .top_sale_products {
+          display: none;
+          cursor: pointer;
+          padding-top: 7rem;
+          // text-align: center;
           p {
-            margin-top: 2rem;
-            font-family: Noto Sans Georgian;
-            font-size: 1.6rem;
-            font-weight: 400;
-            line-height: 2.2rem;
-            text-align: left;
+            font-size: 2.7rem;
+            font-weight: 600;
+            line-height: 2.4rem;
+            // text-align: center;
+            span {
+              color: $button-bg-color;
+            }
           }
         }
       }

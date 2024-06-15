@@ -1,6 +1,6 @@
 body {
   footer {
-    background-color: black;
+    background-color: $bleck-color;
     .footer_container {
       margin-top: 50rem;
 
@@ -116,9 +116,8 @@ body {
             }
             ul {
               display: flex;
-
-              li:not(:last-child) {
-                margin-right: 1.6rem;
+              gap: 1.6rem;
+              li {
                 a {
                   .online_platform {
                     path {
