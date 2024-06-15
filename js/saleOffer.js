@@ -32,7 +32,6 @@ const getSaleOfferTime = () => {
     const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
     day.textContent = days;
-
     hour.textContent = hours;
     minute.textContent = minutes;
     second.textContent = seconds;
