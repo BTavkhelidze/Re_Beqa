@@ -648,21 +648,47 @@ body main .customer_reviews_container .customer_reviews_container {
 body main .customer_reviews_container .customer_reviews_container .costumers_review_header {
   position: relative;
 }
+@media only screen and (max-width: 760px) {
+  body main .customer_reviews_container .customer_reviews_container .costumers_review_header {
+    flex-direction: column;
+  }
+}
 body main .customer_reviews_container .customer_reviews_container .costumers_review_header h2 {
-  font-size: 4.8rem;
   font-weight: 700;
   line-height: 5.76rem;
+  font-size: 4.8rem;
   text-align: left;
+}
+@media only screen and (max-width: 760px) {
+  body main .customer_reviews_container .customer_reviews_container .costumers_review_header h2 {
+    text-align: center;
+    font-size: 3.8rem;
+  }
 }
 body main .customer_reviews_container .customer_reviews_container .costumers_review_header .swiper_btn {
   position: relative;
 }
+@media only screen and (max-width: 760px) {
+  body main .customer_reviews_container .customer_reviews_container .costumers_review_header .swiper_btn {
+    margin-top: 5rem;
+  }
+}
 body main .customer_reviews_container .customer_reviews_container .costumers_review_header .swiper_btn .swiper-button-prev {
   left: var(--swiper-navigation-sides-offset, -80px);
+}
+@media only screen and (max-width: 760px) {
+  body main .customer_reviews_container .customer_reviews_container .costumers_review_header .swiper_btn .swiper-button-prev {
+    left: var(--swiper-navigation-sides-offset, 45%);
+  }
 }
 body main .customer_reviews_container .customer_reviews_container .costumers_review_header .swiper_btn .swiper-button-next {
   position: absolute;
   right: var(--swiper-navigation-sides-offset, 0px);
+}
+@media only screen and (max-width: 760px) {
+  body main .customer_reviews_container .customer_reviews_container .costumers_review_header .swiper_btn .swiper-button-next {
+    right: var(--swiper-navigation-sides-offset, 40%);
+  }
 }
 body main .customer_reviews_container .swiper {
   width: 100%;
@@ -728,7 +754,7 @@ body main .sale_offer_container .sale_offer_content {
 }
 @media only screen and (max-width: 1200px) {
   body main .sale_offer_container .sale_offer_content {
-    padding: 1.2rem 4rem;
+    padding: 12rem 4rem;
   }
 }
 body main .sale_offer_container .sale_offer_content .sale_off_header {
@@ -736,12 +762,28 @@ body main .sale_offer_container .sale_offer_content .sale_off_header {
   font-size: 4.8rem;
   font-weight: 900;
   line-height: 6.528rem;
-  text-align: left;
+}
+@media only screen and (max-width: 1200px) {
+  body main .sale_offer_container .sale_offer_content .sale_off_header {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 760px) {
+  body main .sale_offer_container .sale_offer_content .sale_off_header {
+    font-size: 3.8rem;
+    font-weight: 700;
+  }
 }
 body main .sale_offer_container .sale_offer_content .sale_timer_wrapper {
   display: flex;
-  gap: 3.6rem;
+  flex-wrap: wrap;
+  gap: 3.4rem;
   padding-top: 4.8rem;
+}
+@media only screen and (max-width: 1200px) {
+  body main .sale_offer_container .sale_offer_content .sale_timer_wrapper {
+    justify-content: center;
+  }
 }
 body main .sale_offer_container .sale_offer_content .sale_timer_wrapper .count-down_div {
   border-radius: 2.2rem;
@@ -751,17 +793,33 @@ body main .sale_offer_container .sale_offer_content .sale_timer_wrapper .count-d
   background-color: #101010;
   color: #ffffff;
 }
+@media only screen and (max-width: 760px) {
+  body main .sale_offer_container .sale_offer_content .sale_timer_wrapper .count-down_div {
+    max-width: 20.2rem;
+    padding: 4rem 3.2rem;
+  }
+}
 body main .sale_offer_container .sale_offer_content .sale_timer_wrapper .count-down_div p:first-child {
   font-size: 6.4rem;
-  font-weight: 900;
   line-height: 9.6rem;
   text-align: center;
+}
+@media only screen and (max-width: 760px) {
+  body main .sale_offer_container .sale_offer_content .sale_timer_wrapper .count-down_div p:first-child {
+    font-size: 4.5rem;
+    font-weight: 500;
+  }
 }
 body main .sale_offer_container .sale_offer_content .sale_timer_wrapper .count-down_div p:last-child {
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 2.4rem;
   text-align: center;
+}
+@media only screen and (max-width: 760px) {
+  body main .sale_offer_container .sale_offer_content .sale_timer_wrapper .count-down_div p:last-child {
+    font-size: 1.4rem;
+  }
 }
 body main .sale_offer_container .sale_offer_content .top_sale_products {
   display: none;
@@ -779,9 +837,6 @@ body main .sale_offer_container .sale_offer_content .top_sale_products p span {
 
 body footer {
   background-color: #101010;
-}
-body footer .footer_container {
-  margin-top: 50rem;
 }
 @media only screen and (max-width: 1200px) {
   body footer .footer_container {

@@ -2,8 +2,6 @@ body {
   footer {
     background-color: $bleck-color;
     .footer_container {
-      margin-top: 50rem;
-
       @include responsive(pc) {
         padding: 0px 40px;
       }

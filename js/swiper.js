@@ -1,5 +1,4 @@
 const swiper = new Swiper('.mySwiper', {
-  slidesPerView: 1,
   navigation: {
     prevEl: '.swiper-button-prev',
     nextEl: '.swiper-button-next',

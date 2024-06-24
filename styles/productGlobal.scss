@@ -1,0 +1,9 @@
+@import './utiles/reset';
+@import './utiles/mixins';
+@import './utiles/fonts';
+@import './utiles/extend';
+@import './utiles/variables';
+
+@import './components/header';
+@import './components/product/pro_main.scss';
+@import './components/footer';

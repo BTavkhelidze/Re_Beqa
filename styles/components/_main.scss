@@ -302,33 +302,40 @@ body {
         .costumers_review_header {
           @extend %flex;
           position: relative;
+          @include responsive(phone) {
+            flex-direction: column;
+          }
           h2 {
-            font-size: 4.8rem;
             font-weight: 700;
             line-height: 5.76rem;
+            font-size: 4.8rem;
             text-align: left;
+            @include responsive(phone) {
+              text-align: center;
+              font-size: 3.8rem;
+            }
           }
-          // div {
-          //   // display: flex;
-          //   // align-items: center;
-          //   // justify-content: center;
-          //   // gap: 1.432rem;
-          // }
+
           .swiper_btn {
             position: relative;
-            // display: flex;
-            // flex-direction: column;
-            .swiper-button-prev {
-              // position: absolute;
-              // top: -10px;
-              left: var(--swiper-navigation-sides-offset, -80px);
-              // right: -30px;
-              // right: var(--swiper-navigation-size, 0);
+            @include responsive(phone) {
+              margin-top: 5rem;
             }
+
+            .swiper-button-prev {
+              left: var(--swiper-navigation-sides-offset, -80px);
+              @include responsive(phone) {
+                left: var(--swiper-navigation-sides-offset, 45%);
+              }
+            }
+
             .swiper-button-next {
               position: absolute;
 
               right: var(--swiper-navigation-sides-offset, 0px);
+              @include responsive(phone) {
+                right: var(--swiper-navigation-sides-offset, 40%);
+              }
             }
           }
         }
@@ -408,23 +415,36 @@ body {
         @extend %contentDiv;
         padding-top: 12rem;
         @include responsive(pc) {
-          padding: 1.2rem 4rem;
+          padding: 12rem 4rem;
         }
+
         .sale_off_header {
           font-family: Noto Sans Georgian;
           font-size: 4.8rem;
           font-weight: 900;
           line-height: 6.528rem;
-          text-align: left;
+          @include responsive(pc) {
+            text-align: center;
+          }
+
+          @include responsive(phone) {
+            font-size: 3.8rem;
+            font-weight: 700;
+          }
         }
         .sale_timer_wrapper {
           display: flex;
-
-          gap: 3.6rem;
+          flex-wrap: wrap;
+          gap: 3.4rem;
           padding-top: 4.8rem;
           // width: 100%;
           // display: flex;
           // justify-content: space-between;
+
+          @include responsive(pc) {
+            justify-content: center;
+          }
+
           .count-down_div {
             border-radius: 2.2rem;
             max-width: 25.2rem;
@@ -432,17 +452,30 @@ body {
             padding: 4.6rem 3.6rem;
             background-color: $bleck-color;
             color: $main-bg-color;
+
+            @include responsive(phone) {
+              max-width: 20.2rem;
+
+              padding: 4rem 3.2rem;
+            }
             p:first-child {
               font-size: 6.4rem;
-              font-weight: 900;
               line-height: 9.6rem;
               text-align: center;
+
+              @include responsive(phone) {
+                font-size: 4.5rem;
+                font-weight: 500;
+              }
             }
             p:last-child {
               font-size: 1.6rem;
               font-weight: 300;
               line-height: 2.4rem;
               text-align: center;
+              @include responsive(phone) {
+                font-size: 1.4rem;
+              }
             }
           }
         }
