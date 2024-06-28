@@ -73,25 +73,48 @@ body {
             ul {
               display: flex;
               gap: 5rem;
+              position: relative;
+              li {
+                position: relative;
+                // content: '';
+                // position: absolute;
+                // width: 100%;
+                // height: 2px;
+                a {
+                  text-decoration: none;
+                  color: $main-bg-color;
+                  font-size: 1.3rem;
+                  font-weight: 700;
+                  line-height: 2.5rem;
+                  letter-spacing: 0.2rem;
+                  text-align: left;
+                  transition: 0.5s;
+                }
 
-              a {
-                text-decoration: none;
-                color: $main-bg-color;
-                font-size: 1.3rem;
-                font-weight: 700;
-                line-height: 2.5rem;
-                letter-spacing: 0.2rem;
-                text-align: left;
+                a:hover {
+                  color: $button-bg-color;
+                }
               }
-
-              a:hover {
+              li::after {
+                content: '';
+                width: 0;
+                position: absolute;
+                height: 2px;
+                background-color: $main-bg-color;
+                left: 0;
+                bottom: 0;
+                transition: 0.5s;
+              }
+              li:hover::after {
+                width: 100%;
+                background-color: $button-bg-color;
                 color: $button-bg-color;
-                transition: 250ms;
               }
             }
           }
         }
         .cart {
+          position: relative;
           a {
             .cart_icon {
               path {
@@ -106,6 +129,25 @@ body {
                 }
               }
             }
+          }
+          .cartDecIcon {
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            right: -20px;
+            bottom: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: $main-bg-color;
+
+            border-radius: 50%;
+            background-color: $button-bg-color;
+          }
+          .hidden {
+            visibility: hidden;
           }
         }
       }

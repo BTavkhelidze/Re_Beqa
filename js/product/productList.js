@@ -106,3 +106,91 @@ nextButton.addEventListener('click', () => {
 function seeProduct(productId) {
   window.location.href = `individualProduct.html?id=${productId}`;
 }
+
+function calculateTotalPrice(cart) {
+  const totalPrice = cart.reduce((acc, cur) => {
+    return acc + parseInt(cur.price) * parseInt(cur.quantity);
+  }, 0);
+  return totalPrice;
+}
+
+function calculateProductQuantity(cart) {
+  const totalQuantity = cart.reduce((acc, cur) => {
+    return acc + parseInt(cur.quantity);
+  });
+  return totalQuantity;
+}
+
+function updatecart() {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  const cartContainer = document.querySelector('.cart_products_container');
+
+  const productQuantity = document.querySelector('.product_quantity');
+  cartContainer.innerHTML = '';
+  productQuantity.textContent = cart.length;
+
+  const productsTotalPrice = document.querySelector('.products_total_price');
+  productsTotalPrice.textContent = `$${calculateTotalPrice(cart)}`;
+
+  const removeAll = document.querySelector('.remove_all');
+
+  const checkout_product = document.querySelector('.checkout_product');
+  cart.forEach((product, index) => {
+    const htmlfile = `
+
+    <div class="cart_products">
+      <div class="cart_product_details">
+        <img
+          class="product_img"
+          src="./assets/webp/productHTML/${product.img}"
+          alt=""
+          />
+        <div class="product_name_wrapper">
+        <h4 class="cart_product_name">${product.name}</h4>
+        <p class="cart_product_price">$${product.price}</p>
+        </div>
+      </div>
+     <div>
+         <span class="cart_product_quantity">${product.quantity}</span>
+         <button   class="remove_item_btn">REMOVE</button>
+      </div>
+     </div>
+     `;
+    cartContainer.insertAdjacentHTML('afterbegin', htmlfile);
+
+    const button = document.querySelector('.remove_item_btn');
+
+    button.addEventListener('click', () => {
+      cart.splice(index, 1);
+
+      localStorage.setItem('cart', JSON.stringify(cart));
+
+      updatecart();
+    });
+
+    removeAll.addEventListener('click', () => {
+      localStorage.removeItem('cart');
+      updatecart();
+    });
+  });
+}
+
+const cartDiv = document.querySelector('.cart');
+const overley = document.querySelector('.overlay');
+
+function cartDecoration() {
+  updatecart();
+
+  document.querySelector('.cart_wrapper').classList.toggle('hidden');
+  document.querySelector('.overlay').classList.toggle('hidden');
+  document.body.classList.toggle('noScroll');
+}
+
+cartDiv.addEventListener('click', () => {
+  cartDecoration();
+});
+
+overley.addEventListener('click', () => {
+  cartDecoration();
+});

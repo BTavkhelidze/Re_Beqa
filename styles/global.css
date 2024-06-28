@@ -247,8 +247,12 @@ body header .header_container .header-content .logo .burger_menu .cart_icon path
 body header .header_container .header-content .navigation nav ul {
   display: flex;
   gap: 5rem;
+  position: relative;
 }
-body header .header_container .header-content .navigation nav ul a {
+body header .header_container .header-content .navigation nav ul li {
+  position: relative;
+}
+body header .header_container .header-content .navigation nav ul li a {
   text-decoration: none;
   color: #ffffff;
   font-size: 1.3rem;
@@ -256,10 +260,28 @@ body header .header_container .header-content .navigation nav ul a {
   line-height: 2.5rem;
   letter-spacing: 0.2rem;
   text-align: left;
+  transition: 0.5s;
 }
-body header .header_container .header-content .navigation nav ul a:hover {
+body header .header_container .header-content .navigation nav ul li a:hover {
   color: #d87d4a;
-  transition: 250ms;
+}
+body header .header_container .header-content .navigation nav ul li::after {
+  content: "";
+  width: 0;
+  position: absolute;
+  height: 2px;
+  background-color: #ffffff;
+  left: 0;
+  bottom: 0;
+  transition: 0.5s;
+}
+body header .header_container .header-content .navigation nav ul li:hover::after {
+  width: 100%;
+  background-color: #d87d4a;
+  color: #d87d4a;
+}
+body header .header_container .header-content .cart {
+  position: relative;
 }
 body header .header_container .header-content .cart a .cart_icon path {
   transition: 250ms;
@@ -267,6 +289,22 @@ body header .header_container .header-content .cart a .cart_icon path {
 body header .header_container .header-content .cart a:hover .cart_icon path {
   fill: orange;
   transition: 250ms;
+}
+body header .header_container .header-content .cart .cartDecIcon {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  right: -20px;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  border-radius: 50%;
+  background-color: #d87d4a;
+}
+body header .header_container .header-content .cart .hidden {
+  visibility: hidden;
 }
 body header .underline {
   background-color: #ffffff;

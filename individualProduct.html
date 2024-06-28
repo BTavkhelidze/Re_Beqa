@@ -55,6 +55,7 @@
             </nav>
           </div>
           <div class="cart">
+            <div class="cartDecIcon hidden">1</div>
             <a href="#">
               <svg
                 class="cart_icon"
@@ -77,13 +78,55 @@
       </div>
     </header>
     <main>
+      <section class="cart_container">
+        <div class="overlay hidden"></div>
+        <div class="cart_wrapper hidden">
+          <div class="cart_content">
+            <div class="cart_header">
+              <span>CART <span class="product_quantity">(3)</span></span>
+              <div>
+                <span class="remove_all">Remove all</span>
+              </div>
+            </div>
+
+            <div class="cart_products">
+              <div class="cart_product_details">
+                <img
+                  class="product_img"
+                  src="./assets/webp/productHTML/mark1.webp"
+                  alt=""
+                />
+                <div class="product_name_wrapper">
+                  <h4 class="cart_product_name">XX99 MK 2</h4>
+                  <p class="cart_product_price">$2,999</p>
+                </div>
+              </div>
+              <div>
+                <span class="cart_product_quantity">1</span>
+                <button type="button" class="remove_item_btn">REMOVE</button>
+              </div>
+            </div>
+            <div class="cart_checkout_container">
+              <div class="cart_total_price">
+                <span>TOTAL</span>
+                <p class="products_total_price">$2,999</p>
+              </div>
+              <button type="button" class="checkout_product">CHECKOUT</button>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="individual_product_container">
         <div class="individual_product_content">
           <p class="go_back">
             <a href="./productsPage.html"> Go Back</a>
           </p>
           <div class="product_wrapper">
-            <img src="./assets/webp/productHTML/mark1.webp" alt="" />
+            <img
+              class="product_img"
+              src="./assets/webp/productHTML/mark1.webp"
+              alt=""
+            />
             <div class="describtion_content">
               <p class="new_product">NEW PRODUCT</p>
               <h2 class="product_name">XX99 Mark II</h2>
@@ -118,8 +161,8 @@
       </section>
       <section class="feature_container">
         <div class="feature_content">
-          <h3>FEATURES</h3>
-          <p>
+          <h3 class="feature_header">FEATURES</h3>
+          <p class="product_feature_des">
             Featuring a genuine leather head strap and premium earcups, these
             headphones deliver superior comfort for those who like to enjoy
             endless listening. It includes intuitive controls designed for any
@@ -138,6 +181,7 @@
         </div>
       </section>
     </main>
+
     <script src="./js/product/individualProduct.js"></script>
   </body>
 </html>
