@@ -16,7 +16,7 @@ let productsArray = [];
 async function productsApi() {
   sellingProductContent.innerHTML = '';
 
-  const products = await fetch('./products.json');
+  const products = await fetch('././././products.json');
   const product = await products.json();
   // console.log(product);
 
